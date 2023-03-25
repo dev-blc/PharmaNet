@@ -1,0 +1,45 @@
+{
+	"info": {
+		"_postman_id": "803636be-eed5-47ee-b963-b522cbe4c9bb",
+		"name": "History",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:3000/viewHistory",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nameOfOrg\": \"consumer\",\n    \"drugName\": \"Paracetamol\",\n    \"serialNo\": \"001\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:4000/viewHistory"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/viewCurrentState",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nameOfOrg\": \"consumer\",\n    \"drugName\": \"Paracetamol\",\n    \"serialNo\": \"001\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:4000/viewCurrentState"
+			},
+			"response": []
+		}
+	]
+}

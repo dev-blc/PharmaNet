@@ -1,0 +1,83 @@
+{
+	"info": {
+		"_postman_id": "ebf6ff46-b786-4f20-be17-0b795366f14f",
+		"name": "Supply Chain-Parta",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:3000/createPO",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nameOfOrg\": \"distributor\",\n    \"buyerCRN\": \"DIST001\",\n    \"sellerCRN\": \"MAN001\",\n    \"drugName\": \"Paracetamol\",\n    \"quantity\": \"3\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:4000/createPO"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/createShipment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nameOfOrg\": \"manufacturer\",\n    \"buyerCRN\": \"DIST001\",\n    \"drugName\": \"Paracetamol\",\n    \"listOfAssets\": \"001,002,003\",\n    \"transporterCRN\": \"TRA001\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:4000/createShipment"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/updateShipment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nameOfOrg\": \"transporter\",\n    \"buyerCRN\": \"DIST001\",\n    \"drugName\": \"Paracetamol\",\n    \"transporterCRN\": \"TRA001\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:4000/updateShipment"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
